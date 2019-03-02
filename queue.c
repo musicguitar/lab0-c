@@ -18,19 +18,6 @@
 #include "harness.h"
 #include "queue.h"
 
-char *q_strcpy(char *dest, char *src, size_t dest_size)
-{
-    unsigned int n;
-    if (dest == NULL || src == NULL)
-        return NULL;
-
-    for (n = 0; src[n] != '\0' && n < dest_size; n++)
-        dest[n] = src[n];
-
-    dest[dest_size] = '\0';
-    return dest;
-}
-
 /*
   Create empty queue.
   Return NULL if could not allocate space.
